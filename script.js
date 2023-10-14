@@ -290,7 +290,7 @@ demo.updateCursor = function() {
 demo.updateCursor(); // call the function once to set the initial values
 
 function updateCountdown() {
-
+	
 	const deadline = new Date("2023-10-15T00:00:00+02:00"); // Change this to your desired deadline
 	const now = new Date();
 	const timeRemaining = deadline - now;
@@ -302,6 +302,14 @@ function updateCountdown() {
 	const countdownElement = document.getElementById("countdown");
 	countdownElement.innerHTML = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
+// create an audio element
+const audio = new Audio('path/to/audio/file.mp3');
+
+// set the loop property to true
+audio.loop = true;
+
+// play the audio
+audio.play();
 
 
 
