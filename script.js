@@ -302,14 +302,6 @@ function updateCountdown() {
 	const countdownElement = document.getElementById("countdown");
 	countdownElement.innerHTML = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
-// create an audio element
-const audio = new Audio('path/to/audio/file.mp3');
-
-// set the loop property to true
-audio.loop = true;
-
-// play the audio
-audio.play();
 
 
 
