@@ -9,17 +9,17 @@
 
 // initialize
 
-const audio = new Audio('resources/loop.mp3');
-audio.autoplay = true;
-audio.loop = true;
-audio.preload = 'auto'; // Add this line to preload the audio file
-document.body.appendChild(audio); // Add this line to append the audio element to the body
 
 
 document.addEventListener("DOMContentLoaded", function() {
 	demo.init();
 	window.addEventListener('resize', demo.resize);
 });
+
+window.addEventListener('load', function() {
+	var backgroundMusic = document.getElementById('background-music');
+	backgroundMusic.play();
+  });
 
 // demo namespace
 var demo = {
@@ -74,18 +74,7 @@ demo.init = function() {
 		demo.resize();
 		Ticker.addListener(demo.step);
 		
-		// 
-		const gui = new dat.GUI();
-		gui.add(demo, 'speed', 0.2, 2);
 		
-		// fade out instructions after a few seconds
-		var instructions = document.getElementById('instructions');
-		setTimeout(function() {
-			instructions.style.opacity = 0;
-			setTimeout(function(){
-				instructions.parentNode.removeChild(instructions);
-			}, 2000);
-		}, 4000);
 	}
 }
 
@@ -316,6 +305,7 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
 
 
 
