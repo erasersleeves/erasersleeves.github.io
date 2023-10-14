@@ -290,7 +290,8 @@ demo.updateCursor = function() {
 demo.updateCursor(); // call the function once to set the initial values
 
 function updateCountdown() {
-	const deadline = new Date("2023-10-15"); // Change this to your desired deadline
+
+	const deadline = new Date("2023-10-15T00:00:00+02:00"); // Change this to your desired deadline
 	const now = new Date();
 	const timeRemaining = deadline - now;
   
@@ -301,6 +302,7 @@ function updateCountdown() {
 	const countdownElement = document.getElementById("countdown");
 	countdownElement.innerHTML = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
+
 
 
 updateCountdown();
