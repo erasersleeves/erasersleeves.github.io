@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer with Ticking Sound</title>
     <style>
-/*         body {
+       body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #333;
+            background: linear-gradient(to bottom,  rgba(8,13,40,1) 0%,rgba(38,19,0,1) 100%);
         }
- */
+
         #countdown {
             font-size: 2rem;
             color: #fff;
@@ -23,13 +23,12 @@
     </style> 
 </head>
 <body>
-    <div id="instructions"></div>
-<canvas id="canvas">Canvas is not supported in your browser</canvas>
+
     <div id="countdown">00:00:00</div>
     
     <!-- Add an audio element for the ticking sound -->
     <audio id="tickingSound" preload="auto" autoplay>
-        <source src="ressources/loop.mp3" type="audio/mpeg">
+        <source src="resources/loop.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
